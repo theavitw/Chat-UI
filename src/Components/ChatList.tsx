@@ -26,7 +26,7 @@ function ChatList({ chats }: ChatListProps) {
   }, [chats]);
 
   return (
-    <Box p={4} maxHeight="62vh" overflowY="auto">
+    <Box p={4} maxHeight="60vh" overflowY="auto">
       {chats.length > 0 && <h1 className='time'>{chats[0].time.slice(0, 10)}</h1>}
       {chats.map((chat) => (
         <ChatBubble

@@ -17,7 +17,7 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({ message, sender, time }) => {
       alignItems="center"
       mb={3}
     >
-      <Avatar src={sender.image} alignSelf="start" h="10%" w="10%" p={2}/>
+      <Avatar src={sender.image} alignSelf="start" h="50px" w="50px" p={2}/>
       <Box
         className = "box"
         bg={sender.self ? '#1C63D5' : "white"}

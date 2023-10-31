@@ -52,7 +52,7 @@ const App: React.FC = () => {
     <ChakraProvider>
       
       
-      <Box maxW="600px" m="auto" p={4}>
+      <Box maxW="-webkit-fill-available" m="auto">
         <Header groupName = {groupname} To = {To} From ={From}/>
         <Divider />
         <ChatList chats={chats} />

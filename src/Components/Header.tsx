@@ -23,7 +23,7 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({ groupName, onEditClick, onBackC
   return (
     <>
     
-    <Box p={4} borderBottom="1px solid #ccc">
+    <Box p={2} borderBottom="1px solid #ccc">
       <Flex align="center" justify="space-between">
         <Flex align="center">
           <IconButton

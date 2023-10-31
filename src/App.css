@@ -34,16 +34,17 @@ box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
 
 }
 .pop{
- 
-  border-radius: 999px;
-background-color: var(--colours-brand-primary, #008000) !important;
-box-shadow: 0px -1px 8px 0px rgba(0, 0, 0, 0.05);
+
+
   
  
-   display: flex;
-  justify-content:space-evenly;
-  align-items: center;
-   
+  
+background: var(--colours-brand-primary, #008000) !important;
+   display: inline-flex;
+border-radius: 999px !important; 
+justify-content: center;
+align-items: center;
+
   
 }
 .cb_1{

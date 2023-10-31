@@ -25,7 +25,7 @@ function SlideEx() {
 </svg>
 </Button>
   </PopoverTrigger>
-  <PopoverContent className= "pop" height = "10vh" width = "30vh">
+  <PopoverContent className= "pop" height = "60px" width = "150px">
       <PopoverArrow backgroundColor="green"/>
    
    
