@@ -44,7 +44,7 @@ background: var(--colours-brand-primary, #008000) !important;
 border-radius: 999px !important; 
 justify-content: center;
 align-items: center;
-
+z-index: 10000;
   
 }
 .cb_1{
@@ -53,4 +53,26 @@ align-items: center;
   flex-direction: row;
   width:100%;
   justify-content: space-evenly;
+}
+
+.header{
+ 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+}
+
+.chat{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    
+    background-color: #fff;
+    z-index: 999;
+    display: flex;
 }

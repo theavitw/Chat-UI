@@ -21,7 +21,7 @@ const groupLogos = [
   ]
 const ChatHeader: React.FC<ChatHeaderProps> = ({ groupName, onEditClick, onBackClick , To , From }) => {
   return (
-    <>
+    <div className = "header">
     
     <Box p={2} borderBottom="1px solid #ccc">
       <Flex align="center" justify="space-between">
@@ -74,7 +74,7 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({ groupName, onEditClick, onBackC
     </Box>
       
       
-    </>
+    </div>
   );
 };
 

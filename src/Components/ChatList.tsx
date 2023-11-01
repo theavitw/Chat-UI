@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-import { Box } from '@chakra-ui/react';
+import  { useEffect, useRef } from 'react';
+import { Box , Button} from '@chakra-ui/react';
 import ChatBubble from './Chatbubble';
+import { ArrowDownIcon } from '@chakra-ui/icons';
 
 interface ChatListProps {
   chats: {
@@ -26,8 +27,8 @@ function ChatList({ chats }: ChatListProps) {
   }, [chats]);
 
   return (
-    <Box p={4} maxHeight="60vh" overflowY="auto">
-      {chats.length > 0 && <h1 className='time'>{chats[0].time.slice(0, 10)}</h1>}
+    <Box p={4} maxHeight="75vh">
+      {chats.length > 0 && <h1 className='time'>{chats[0].time.slice(0,10)}</h1>}
       {chats.map((chat) => (
         <ChatBubble
           key={chat.id}
@@ -37,6 +38,18 @@ function ChatList({ chats }: ChatListProps) {
         />
       ))}
       <div ref={chatEndRef} />
+      <Button
+          onClick={scrollToBottom}
+          position="fixed"
+          bottom="60px"
+          right="10px"
+          
+          borderRadius="50%"
+         
+          zIndex="10"
+        >
+          <ArrowDownIcon />
+        </Button>
     </Box>
   );
 }

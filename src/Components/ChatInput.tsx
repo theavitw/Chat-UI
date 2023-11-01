@@ -19,7 +19,7 @@ function ChatInput({ sendMessage }: ChatInputProps) {
   };
 
   return (
-    <Box p={4} display="flex" alignItems="center">
+    <Box  className = "chat">
       <Input placeholder="Type a message..." value={message} onChange={handleChange}
     
       />
