@@ -1,7 +1,7 @@
 export function register(publicUrl: string) {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      const swUrl = `${publicUrl}/service-worker.js`;
+      const swUrl = `${publicUrl}service-worker.js`; // Removed extra slashes
 
       if (isLocalhost(window.location.hostname)) {
         checkValidServiceWorker(swUrl);
