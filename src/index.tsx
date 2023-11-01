@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import * as serviceWorker from './service-worker';
+import * as serviceWorker from '../public/service-worker';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -10,4 +10,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-serviceWorker.register("https://main--thriving-lolly-ad1853.netlify.app/"); // Adjust URL without double slashes
+serviceWorker.register();

@@ -1,23 +1,22 @@
-export function register(publicUrl: string) {
+const isLocalhost = Boolean(
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '[::1]' ||
+  window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
+);
+
+export function register() {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      const swUrl = `${publicUrl}service-worker.js`; // Removed extra slashes
+      const swUrl = "/service-worker.js";
 
-      if (isLocalhost(window.location.hostname)) {
+
+      if (isLocalhost) {
         checkValidServiceWorker(swUrl);
       } else {
         registerValidSW(swUrl);
       }
     });
   }
-}
-
-function isLocalhost(hostname: string) {
-  return (
-    hostname === 'localhost' ||
-    hostname === '[::1]' ||
-    hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
-  );
 }
 
 function registerValidSW(swUrl: string) {
@@ -51,13 +50,14 @@ function checkValidServiceWorker(swUrl: string) {
         response.status === 404 ||
         response.headers.get('content-type')?.indexOf('javascript') === -1
       ) {
-       
+        // Service worker not found, reload the page to reinstall the service worker
         navigator.serviceWorker.ready.then((registration) => {
           registration.unregister().then(() => {
             window.location.reload();
           });
         });
       } else {
+        // Valid service worker found
         registerValidSW(swUrl);
       }
     })
