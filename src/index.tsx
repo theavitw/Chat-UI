@@ -10,4 +10,4 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-serviceWorker.register("https://superiorsizzlingkeys.theavitw.repl.co/"); 
+serviceWorker.register("https://main--thriving-lolly-ad1853.netlify.app/"); 
