@@ -3,17 +3,13 @@
   "name": "Progressive Web Chat App",
   "icons": [
     {
-      "src": "icons/icon-192.png",
+      "src": "favicon.svg",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/svg"
     },
-    {
-      "src": "icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    
   ],
-  "start_url": "/",
+  "start_url": "https://superiorsizzlingkeys.theavitw.repl.co/",
   "display": "standalone",
   "theme_color": "#3498db",
   "background_color": "#ffffff",

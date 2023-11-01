@@ -7,7 +7,7 @@ const isLocalhost = Boolean(
 export function register() {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      const swUrl = "/service-worker.js";
+      const swUrl = "/serviceWorker.ts";
 
       if (isLocalhost) {
         checkValidServiceWorker(swUrl);
@@ -18,7 +18,7 @@ export function register() {
   }
 }
 
-function registerValidSW(swUrl: string) {
+function registerValidSW(swUrl) {
   navigator.serviceWorker
     .register(swUrl)
     .then((registration) => {
@@ -28,8 +28,6 @@ function registerValidSW(swUrl: string) {
           installingWorker.onstatechange = () => {
             if (installingWorker.state === 'installed') {
               if (navigator.serviceWorker.controller) {
-                // At this point, the updated content is available.
-                // You may notify the user or refresh the UI.
                 console.log('New content is available; please refresh.');
               }
             }
@@ -39,24 +37,23 @@ function registerValidSW(swUrl: string) {
     })
     .catch((error) => {
       console.error('Error during service worker registration:', error);
+      // Handle the error here (e.g., notify the user, log, or perform recovery steps)
     });
 }
 
-function checkValidServiceWorker(swUrl: string) {
+function checkValidServiceWorker(swUrl) {
   fetch(swUrl)
     .then((response) => {
       if (
         response.status === 404 ||
         response.headers.get('content-type')?.indexOf('javascript') === -1
       ) {
-        // Service worker not found, reload the page to reinstall the service worker
         navigator.serviceWorker.ready.then((registration) => {
           registration.unregister().then(() => {
             window.location.reload();
           });
         });
       } else {
-        // Valid service worker found
         registerValidSW(swUrl);
       }
     })
