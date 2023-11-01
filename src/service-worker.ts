@@ -1,7 +1,6 @@
-export function register() {
+export function register(publicUrl: string) {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      const publicUrl = process.env.PUBLIC_URL as string;
       const swUrl = `${publicUrl}/service-worker.js`;
 
       if (isLocalhost(window.location.hostname)) {
