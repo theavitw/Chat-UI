@@ -27,7 +27,7 @@ function ChatList({ chats }: ChatListProps) {
   }, [chats]);
 
   return (
-    <Box p={4} maxHeight="75vh">
+    <Box p={4} maxHeight="70vh"  maxW = "600px">
       {chats.length > 0 && <h1 className='time'>{chats[0].time.slice(0,10)}</h1>}
       {chats.map((chat) => (
         <ChatBubble
@@ -40,9 +40,9 @@ function ChatList({ chats }: ChatListProps) {
       <div ref={chatEndRef} />
       <Button
           onClick={scrollToBottom}
-          position="fixed"
-          bottom="60px"
-          right="10px"
+          position="sticky"
+          bottom="10%"
+          left="90%"
           
           borderRadius="50%"
          

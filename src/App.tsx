@@ -67,7 +67,7 @@ const App: React.FC = () => {
 
   return (
     <ChakraProvider>
-      <Box maxW="800px" m="auto">
+      <Box maxW="600px" m="auto">
         <Header groupName={groupname} To={To} From={From} />
         <Divider />
         <ChatList chats={chats} />
