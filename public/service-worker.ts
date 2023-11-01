@@ -9,7 +9,6 @@ export function register() {
     window.addEventListener('load', () => {
       const swUrl = "/service-worker.js";
 
-
       if (isLocalhost) {
         checkValidServiceWorker(swUrl);
       } else {
